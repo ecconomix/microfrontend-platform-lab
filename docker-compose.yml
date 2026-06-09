@@ -1,0 +1,24 @@
+services:
+  shell:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    command: pnpm --filter shell dev
+    ports:
+      - "3000:3000"
+
+  dashboard:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    command: pnpm --filter dashboard dev
+    ports:
+      - "3001:3001"
+
+  settings:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    command: pnpm --filter settings dev
+    ports:
+      - "3002:3002"

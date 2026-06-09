@@ -11,7 +11,7 @@ function App() {
 
   return (
     <>
-      <h1>Dashboard</h1>
+      <h1>Dashboard Page</h1>
       <p>
         Provides user information: {user.name} ({user.email})
       </p>
