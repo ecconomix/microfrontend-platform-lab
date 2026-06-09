@@ -1,0 +1,18 @@
+{
+  "name": "microfrontend-platform-lab",
+  "private": true,
+  "scripts": {
+    "dev": "pnpm --parallel --filter shell --filter dashboard --filter settings dev",
+    "dev:shell": "pnpm --filter shell dev",
+    "dev:dashboard": "pnpm --filter dashboard dev",
+    "dev:settings": "pnpm --filter settings dev",
+    "build": "pnpm -r build",
+    "build:apps": "pnpm --filter shell --filter dashboard --filter settings build",
+    "build:packages": "pnpm --filter @platform/ui --filter @platform/contracts build",
+    "lint:apps": "pnpm --filter shell --filter dashboard --filter settings lint",
+    "test:apps": "pnpm --filter shell --filter dashboard --filter settings test"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
