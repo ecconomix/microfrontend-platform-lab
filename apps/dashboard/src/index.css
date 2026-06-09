@@ -1,0 +1,8 @@
+html {
+  font-smooth: antialiased;
+  -webkit-font-smoothing: antialiased;
+}
+
+p {
+  font-size: 16px;
+}

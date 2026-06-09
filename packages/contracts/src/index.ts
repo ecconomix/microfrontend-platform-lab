@@ -1,1 +1,5 @@
-console.log("Contracts package loaded");
+export interface User {
+  id: number;
+  name: string;
+  email: string;
+}

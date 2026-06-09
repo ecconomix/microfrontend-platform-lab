@@ -1,1 +1,1 @@
-console.log("ui package loaded");
+export { Button } from "./button/Button";
