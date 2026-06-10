@@ -1,22 +1,18 @@
-import type { User } from "@platform/contracts";
-import "./App.css";
-import { Button } from "@platform/ui";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { DashboardHome } from "./pages/DashboardHome";
+import { StatsPage } from "./pages/StatsPage";
+import "./index.css";
 
 function App() {
-  const user: User = {
-    id: 1,
-    name: "John Doe",
-    email: "johndoe@example.com",
-  };
-
   return (
-    <>
-      <h1>Dashboard Page</h1>
-      <p>
-        Provides user information: {user.name} ({user.email})
-      </p>
-      <Button>Click Me</Button>
-    </>
+    <BrowserRouter>
+      <div style={{ minHeight: "100vh", backgroundColor: "#f9fafb" }}>
+        <Routes>
+          <Route path="/" element={<DashboardHome />} />
+          <Route path="/stats" element={<StatsPage />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
