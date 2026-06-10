@@ -1,0 +1,27 @@
+services:
+  shell:
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
+      args:
+        APP_NAME: shell
+    ports:
+      - "8080:80"
+
+  dashboard:
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
+      args:
+        APP_NAME: dashboard
+    ports:
+      - "8081:80"
+
+  settings:
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
+      args:
+        APP_NAME: settings
+    ports:
+      - "8082:80"
