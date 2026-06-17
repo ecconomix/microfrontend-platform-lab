@@ -1,0 +1,21 @@
+services:
+  shell:
+    image: ghcr.io/ecconomix/microfrontend-platform-lab-shell:latest
+    container_name: shell
+    ports:
+      - "3000:80"
+    restart: unless-stopped
+
+  dashboard:
+    image: ghcr.io/ecconomix/microfrontend-platform-lab-dashboard:latest
+    container_name: dashboard
+    ports:
+      - "3001:80"
+    restart: unless-stopped
+
+  settings:
+    image: ghcr.io/ecconomix/microfrontend-platform-lab-settings:latest
+    container_name: settings
+    ports:
+      - "3002:80"
+    restart: unless-stopped
