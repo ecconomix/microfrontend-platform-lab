@@ -6,7 +6,7 @@ import "./index.css";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/settings">
       <div style={{ minHeight: "100vh", backgroundColor: "#f9fafb" }}>
         <Routes>
           <Route path="/" element={<SettingsHome />} />

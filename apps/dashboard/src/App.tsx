@@ -5,7 +5,7 @@ import "./index.css";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/dashboard">
       <div style={{ minHeight: "100vh", backgroundColor: "#f9fafb" }}>
         <Routes>
           <Route path="/" element={<DashboardHome />} />
