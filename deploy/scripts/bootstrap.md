@@ -72,11 +72,13 @@ docker version
 
 # Install Docker Compose Plugin
 
+Install:
+
+    sudo apt install docker-compose-plugin -y
+
 Verify:
 
-```bash
-docker compose version
-```
+    docker compose version
 
 Expected:
 
