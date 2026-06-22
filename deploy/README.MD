@@ -174,7 +174,7 @@ The Git repository should contain safe reusable files:
 
 * `deploy/docker-compose.yml`
 * `deploy/nginx.conf`
-* `deploy/README.md`
+* `deploy/README.MD`
 * `deploy/.env.example`
 * `deploy/scripts/`
 
