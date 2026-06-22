@@ -227,11 +227,9 @@ docker ps
 
 # Restore Existing Deployment
 
-If migrating to a new VM, follow:
+If migrating to a new VM, follow the "Restore process" section in:
 
-```txt
-deploy/restore.md
-```
+    deploy/README.MD
 
 to restore:
 
