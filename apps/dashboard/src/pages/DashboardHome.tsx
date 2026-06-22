@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { PageLayout, PageHeader, Card } from "@platform/ui";
 import { mockStats } from "@platform/contracts";
 
@@ -18,9 +17,9 @@ export const DashboardHome = () => {
           </Card>
         ))}
       </div>
-      <Link to="/stats" style={{ fontSize: "14px", color: "#2563eb", textDecoration: "none" }}>
+      <a href="/dashboard/stats" style={{ fontSize: "14px", color: "#2563eb", textDecoration: "none" }}>
         View detailed stats →
-      </Link>
+      </a>
     </PageLayout>
   );
 };
