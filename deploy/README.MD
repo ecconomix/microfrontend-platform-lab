@@ -377,11 +377,9 @@ curl -fsSL https://microfrontend-platform-lab.duckdns.org/settings/ | grep -i '<
 
 Expected output:
 
-```
-<title>shell</title>
-<title>dashboard</title>
-<title>settings</title>
-```
+    <title>MFL - Home</title>
+    <title>MFL - Dashboard</title>
+    <title>MFL - Settings</title>
 
 ## Notes
 
