@@ -225,7 +225,7 @@ The VM folder should contain:
 ```
 docker-compose.yml
 nginx.conf
-README.md
+README.MD
 .env.example
 scripts/
 ```
