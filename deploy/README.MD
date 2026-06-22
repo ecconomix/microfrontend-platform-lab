@@ -283,11 +283,9 @@ Check Certbot files:
 ls -la certbot/conf
 ```
 
-Check environment config:
+Check environment config (avoid printing secrets):
 
-```
-cat .env
-```
+    grep -E '^(DOMAIN|IMAGE_TAG|SHELL_IMAGE|DASHBOARD_IMAGE|SETTINGS_IMAGE)=' .env
 
 Important:
 
