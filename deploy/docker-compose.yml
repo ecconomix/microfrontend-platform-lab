@@ -1,0 +1,40 @@
+services:
+  reverse-proxy:
+    image: nginx:alpine
+    container_name: reverse-proxy
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+      - ./certbot/www:/var/www/certbot:ro
+      - ./certbot/conf:/etc/letsencrypt:ro
+    depends_on:
+      - shell
+      - dashboard
+      - settings
+    restart: unless-stopped
+
+  certbot:
+    image: certbot/certbot
+    volumes:
+      - ./certbot/www:/var/www/certbot
+      - ./certbot/conf:/etc/letsencrypt
+
+  shell:
+    image: ${SHELL_IMAGE}:${IMAGE_TAG}
+    expose:
+      - 80
+    restart: unless-stopped
+
+  dashboard:
+    image: ${DASHBOARD_IMAGE}:${IMAGE_TAG}
+    expose:
+      - 80
+    restart: unless-stopped
+
+  settings:
+    image: ${SETTINGS_IMAGE}:${IMAGE_TAG}
+    expose:
+      - 80
+    restart: unless-stopped
