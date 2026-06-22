@@ -117,7 +117,7 @@ Required files:
 ```txt
 docker-compose.yml
 nginx.conf
-README.md
+README.MD
 .env.example
 scripts/
 ```
