@@ -1,8 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Navigation } from "./components/Navigation";
 import { HomePage } from "./pages/HomePage";
-import { DashboardApp } from "@repo/dashboard";
-import { SettingsApp } from "@repo/settings";
+import { RemoteApp } from "./remotes/RemoteApp";
 
 function App() {
   return (
@@ -12,8 +11,14 @@ function App() {
           <Navigation />
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/dashboard/*" element={<DashboardApp />} />
-            <Route path="/settings/*" element={<SettingsApp />} />
+            <Route
+              path="/dashboard/*"
+              element={<RemoteApp name={"dashboard"} />}
+            />
+            <Route
+              path="/settings/*"
+              element={<RemoteApp name={"settings"} />}
+            />
           </Routes>
         </div>
       </BrowserRouter>

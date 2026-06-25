@@ -1,3 +1,5 @@
+export { type RemoteApi } from "./remote";
+
 export interface User {
   id: number;
   name: string;

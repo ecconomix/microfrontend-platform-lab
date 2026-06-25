@@ -1,0 +1,14 @@
+{
+  "dashboard": {
+    "url": "/remotes/dashboard-remote.js",
+    "version": "1.0.0",
+    "contractVersion": "1",
+    "globalName": "dashboardRemote"
+  },
+  "settings": {
+    "url": "/remotes/settings-remote.js",
+    "version": "1.0.0",
+    "contractVersion": "1",
+    "globalName": "settingsRemote"
+  }
+}
